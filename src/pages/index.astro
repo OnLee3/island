@@ -1,5 +1,5 @@
 ---
-
+import { App } from './App.jsx';
 ---
 
 <html lang="en">
@@ -11,6 +11,19 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+    <App client:only/>
 	</body>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 24px;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+    }
+  </style>
 </html>
